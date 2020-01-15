@@ -38,7 +38,7 @@ Klasa reprezentująca listę odtwarzania powinna dostarczać następujące metod
 
 * play() - odtwarza utwory na liście zgodnie z zadaną kolejnością:
            (a) sekwencyjnie - zgodnie z kolejnością na liście odtwarzania,
-           (b) losowo - zgodnie z kolejnością określoną przez std::shuffle wywołane
+           (b) losowo - zgodnie z kolejnością określoną przelib_playlistz std::shuffle wywołane
                z std::default_random_engine,
            (c) nieparzyste/parzyste - najpierw wszystkie nieparzyste, a następnie wszystkie
                parzyste elementy listy odtwarzania.

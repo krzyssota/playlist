@@ -1,5 +1,6 @@
-//
-// Created by biesiad on 15.01.2020.
-//
-
 #include "Player.h"
+
+File& Player::openFile(File &f) {
+    f.setOpenStatus();
+    return f;
+}
