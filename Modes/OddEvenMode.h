@@ -4,7 +4,10 @@
 #include "Mode.h"
 
 class OddEvenMode : public Mode {
-
+  protected:
+    OddEvenMode() = default;
+  public:
+    static OddEvenMode createOddEvenMode() { return OddEvenMode(); }
 };
 
 #endif //_ODDEVENMODE_H_
