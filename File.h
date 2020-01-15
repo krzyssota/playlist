@@ -1,12 +1,8 @@
-//
-// Created by biesiad on 15.01.2020.
-//
-
-#ifndef SLOWNIK__FILE_H_
-#define SLOWNIK__FILE_H_
+#ifndef _FILE_H_
+#define _FILE_H_
 
 class File {
 
 };
 
-#endif //SLOWNIK__FILE_H_
+#endif //_FILE_H_
