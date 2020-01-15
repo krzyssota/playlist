@@ -1,7 +1,9 @@
 #ifndef _SHUFFLEMODE_H_
 #define _SHUFFLEMODE_H_
 
-class ShuffleMode : Mode {
+#include "Mode.h"
+
+class ShuffleMode : public Mode {
 
 };
 

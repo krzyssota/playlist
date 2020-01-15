@@ -1,7 +1,9 @@
 #ifndef _SONG_H_
 #define _SONG_H_
 
-class Song {
+#include "Components/File.h"
+
+class Song : public File {
 
 };
 

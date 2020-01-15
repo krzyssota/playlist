@@ -1,7 +1,9 @@
 #ifndef _FILE_H_
 #define _FILE_H_
 
-class File {
+#include "Component.h"
+
+class File : public Component {
 
 };
 

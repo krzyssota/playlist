@@ -1,7 +1,9 @@
 #ifndef _ODDEVENMODE_H_
 #define _ODDEVENMODE_H_
 
-class OddEvenMode : Mode {
+#include "Mode.h"
+
+class OddEvenMode : public Mode {
 
 };
 

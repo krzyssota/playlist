@@ -1,7 +1,9 @@
 #ifndef _MOVIE_H_
 #define _MOVIE_H_
 
-class Movie {
+#include "File.h"
+
+class Movie : public File {
 
 };
 
