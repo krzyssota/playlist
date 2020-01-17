@@ -2,7 +2,6 @@
 #include "OddEvenMode.h"
 
 std::shared_ptr<OddEvenMode> createOddEvenMode() {
-
     return std::make_shared<OddEvenMode>();
 }
 
@@ -12,6 +11,6 @@ void OddEvenMode::play(const std::vector<std::shared_ptr<Component>> &elements) 
         elements[i]->play();
     }
     for(size_t i = 0; i < sz; i+=2) {
-        elements[i]->play();
+        elements[i].get()->play();
     }
 }

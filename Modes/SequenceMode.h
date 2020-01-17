@@ -9,6 +9,8 @@ class SequenceMode : public Mode {
 
 public:
     SequenceMode() = default;
+    ~SequenceMode() override = default;
+    void play(const std::vector<std::shared_ptr<Component>>& elements) override;
 };
 
 std::shared_ptr<SequenceMode> createSequenceMode();

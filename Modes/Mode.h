@@ -6,12 +6,9 @@
 #include <Components/Component.h>
 
 class Mode {
-  public:
-    virtual ~Mode() = 0;
-
 public:
-
-    virtual void play(const std::vector<std::shared_ptr<Component>>& elements);
+    virtual ~Mode() = default;;
+    virtual void play(const std::vector<std::shared_ptr<Component>>& elements) = 0;
 };
 
 #endif //_MODE_H_

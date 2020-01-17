@@ -3,7 +3,7 @@
 
 #include "Components/File.h"
 
-class Song : public Component {
+class Song : public File {
 private:
     std::string artist;
 public:

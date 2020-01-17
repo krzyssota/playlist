@@ -5,7 +5,7 @@ File& Player::openFile(File &f) {
     return f;
 }
 
-std::shared_ptr<const Playlist> Player::createPlaylist(std::string s) {
+std::shared_ptr<Playlist> Player::createPlaylist(std::string s) {
 
-    return std::make_shared<const Playlist>(s);
+    return std::make_shared<Playlist>(s);
 }

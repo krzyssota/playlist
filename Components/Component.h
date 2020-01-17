@@ -3,8 +3,7 @@
 
 class Component {
 public:
-
-    virtual void play();
+    virtual void play() = 0;
 };
 
 #endif //_COMPONENT_H_

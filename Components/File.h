@@ -3,13 +3,14 @@
 
 #include <string>
 #include <map>
+#include <vector>
 #include "Component.h"
 
 class File : public Component {
   private:
     void separateAttributes(std::vector<std::string> &strings);
 protected :
-    bool opened;
+    bool opened{};
     std::map<std::string, std::string> attributes;
     std::string extraMetadata;
     std::string title;

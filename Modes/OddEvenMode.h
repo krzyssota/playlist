@@ -1,6 +1,7 @@
 #ifndef _ODDEVENMODE_H_
 #define _ODDEVENMODE_H_
 
+#include <memory>
 #include "Mode.h"
 
 class OddEvenMode : public Mode {
