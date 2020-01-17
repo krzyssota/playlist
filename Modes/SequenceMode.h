@@ -1,13 +1,16 @@
 #ifndef _SEQUENCEMODE_H_
 #define _SEQUENCEMODE_H_
 
+#include <memory>
 #include "Mode.h"
 
+
 class SequenceMode : public Mode {
-  protected:
+public:
     SequenceMode() = default;
-  public:
-    static SequenceMode createSequenceMode() { return SequenceMode(); }
 };
+
+std::shared_ptr<SequenceMode> createSequenceMode();
+
 
 #endif //_SEQUENCEMODE_H_

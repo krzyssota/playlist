@@ -2,6 +2,7 @@
 #define _COMPONENT_H_
 
 class Component {
+public:
     virtual void play();
 };
 

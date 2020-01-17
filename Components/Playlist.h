@@ -3,6 +3,7 @@
 
 #include <string>
 #include <Modes/SequenceMode.h>
+#include <utility>
 #include <vector>
 #include "Components/Component.h"
 #include "Modes/Mode.h"
@@ -10,11 +11,11 @@
 class Playlist : public Component {
   private:
     std::string name;
-    Mode mode;
-    std::vector<Component> elements;
+    std::shared_ptr<Mode> mode;
+    std::vector<std::shared_ptr<Component>> elements;
 
   public:
-    explicit Playlist(std::string &name) : name(name), mode(SequenceMode()) {}
+    explicit Playlist(std::string name) : name(std::move(name)), mode(createSequenceMode()) {}
 
     void add(const Component &element);
     void add(const Component &element, size_t position);
@@ -22,7 +23,7 @@ class Playlist : public Component {
     void remove();
     void remove(size_t position);
 
-    void setMode(Mode newMode);
+    void setMode(const std::shared_ptr<Mode>& newMode);
 
     void play();
 };
