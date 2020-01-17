@@ -3,11 +3,11 @@
 
 #include "File.h"
 
-class Movie : public File {
+class Movie : public Component {
 private :
     int year;
 public :
-    Movie(std::string s);
+    explicit Movie(std::string &s);
 };
 
 #endif //_MOVIE_H_

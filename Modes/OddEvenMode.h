@@ -6,6 +6,7 @@
 class OddEvenMode : public Mode {
   protected:
     OddEvenMode() = default;
+    ~OddEvenMode() override = default;
   public:
     static OddEvenMode createOddEvenMode() { return OddEvenMode(); }
 };

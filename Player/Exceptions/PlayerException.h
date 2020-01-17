@@ -1,7 +1,9 @@
 #ifndef _PLAYEREXCEPTION_H_
 #define _PLAYEREXCEPTION_H_
 
-class PlayerException {
+#include <bits/exception.h>
+
+class PlayerException : std::exception {
 
 };
 
