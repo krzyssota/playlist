@@ -9,6 +9,7 @@ class Player {
 public :
     std::shared_ptr<const Playlist> createPlaylist(std::string s);
     File& openFile(File& f);
+
 };
 
 #endif //_PLAYER_H_

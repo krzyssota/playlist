@@ -7,6 +7,7 @@ std::shared_ptr<ShuffleMode> createSequenceMode(unsigned seed) {
 }
 
 void ShuffleMode::play(const std::vector<std::shared_ptr<Component>> &elements) {
+
     size_t sz = elements.size();
 
     std::vector<size_t> indexes;

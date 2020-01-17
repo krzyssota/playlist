@@ -10,6 +10,7 @@ class Mode {
     virtual ~Mode() = 0;
 
 public:
+
     virtual void play(const std::vector<std::shared_ptr<Component>>& elements);
 };
 

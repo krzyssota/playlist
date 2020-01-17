@@ -2,6 +2,7 @@
 #include "OddEvenMode.h"
 
 std::shared_ptr<OddEvenMode> createOddEvenMode() {
+
     return std::make_shared<OddEvenMode>();
 }
 

@@ -3,6 +3,7 @@
 
 class Component {
 public:
+
     virtual void play();
 };
 

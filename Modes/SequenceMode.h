@@ -6,6 +6,7 @@
 
 
 class SequenceMode : public Mode {
+
 public:
     SequenceMode() = default;
 };

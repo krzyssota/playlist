@@ -4,10 +4,9 @@
 #include "Mode.h"
 
 class OddEvenMode : public Mode {
-  protected:
+public:
     OddEvenMode() = default;
     ~OddEvenMode() override = default;
-public:
     void play(const std::vector<std::shared_ptr<Component>>& elements) override;
 };
 
