@@ -5,13 +5,14 @@
 #include "Component.h"
 
 class File : public Component {
-private:
+protected :
     bool opened;
     std::string extraMetadata;
     std::string title;
     std::string content;
 public:
     File(std::string& s);
+    File();
     void setOpenStatus();
 };
 

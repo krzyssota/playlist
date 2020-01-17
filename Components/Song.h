@@ -7,7 +7,7 @@ class Song : public File {
 private:
     std::string artist;
 public:
-    Song(std::string s);
+    Song(const std::string& content, std::string args);
 };
 
 #endif // _SONG_H_
