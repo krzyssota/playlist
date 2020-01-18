@@ -12,6 +12,7 @@ add_executable(playlist
         Components/Movie.cpp Components/Movie.h
         Components/Playlist.cpp Components/Playlist.h
         Components/Component.cpp Components/Component.h
+        Components/FilesParser.cpp Components/FilesParser.h
         Player/Player.cpp Player/Player.h
         Player/Exceptions/PlayerException.cpp Player/Exceptions/PlayerException.h
         Player/Exceptions/CycleException.cpp Player/Exceptions/CycleException.h

@@ -1,19 +1,11 @@
-#include <vector>
 #include "File.h"
+#include "FilesParser.h"
+#include <vector>
 #include <regex>
 #include <Player/Exceptions/InvalidNameException.h>
 
-static const std::regex CONTENT_REGEX(R"(^([a-zA-Z0-9 ,.!?':;\-])+$)");
-
 static const char PIPE = '|';
 static const char COLON = ':';
-static const std::string ARTIST = "artist";
-static const std::string TITLE = "title";
-static const std::string YEAR = "year";
-
-static std::vector<std::string> splitString(std::string &s, char delimiter);
-
-static bool validateDescripton(const std::vector<std::string> &strings);
 
 
 void File::setOpenStatus() {
@@ -39,45 +31,17 @@ File::File(std::string &description) : opened(false) {
 //    std::regex_replace(description, rgx_pipe, "\0");
 //    std::regex_replace(description, rgx_colon, "\0");
 
-    std::vector<std::string> tokens = splitString(description, PIPE);
+    strings_t tokens = FilesParser::splitString(description, PIPE);
 
-    if (!validateDescripton(tokens)) {
+    if (!FilesParser::validateDescripton(tokens)) {
         throw InvalidNameException();
     }
 
-    separateAttributes(tokens);
+    fileType = tokens.front();
+    content = tokens.back();
+    attributes = FilesParser::separateAttributes(tokens);
 }
 
 File::File() {
     // empty
-}
-
-std::vector<std::string> splitString(std::string &s, char delimiter) {
-    std::vector<std::string> tokens;
-    std::string token;
-    std::istringstream tokenStream(s);
-
-    while (std::getline(tokenStream, token, delimiter)) {
-        tokens.push_back(token);
-    }
-
-    return tokens;
-}
-
-static bool validateDescripton(const std::vector<std::string> &strings) {
-    for (const std::string& s : strings) {
-        if (!std::regex_match(s, CONTENT_REGEX)) { return false; }
-    }
-
-    return true;
-}
-
-void File::separateAttributes(std::vector<std::string> &strings) {
-    fileType = strings[0];
-
-    size_t i = 1;
-
-    for (; i < strings.size() - 1; i++) {
-
-    }
 }

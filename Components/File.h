@@ -3,20 +3,22 @@
 
 #include <string>
 #include <map>
+#include <vector>
 #include "Component.h"
 
+using strings_t = std::vector<std::string>;
+using attributes_t = std::map<std::string, std::string>;
+
 class File : public Component {
-  private:
-    void separateAttributes(std::vector<std::string> &strings);
 protected :
     bool opened;
-    std::map<std::string, std::string> attributes;
+    attributes_t attributes;
     std::string extraMetadata;
     std::string title;
     std::string content;
     std::string fileType;
 public:
-    File(std::string& s);
+    explicit File(std::string& s);
     File();
     void setOpenStatus();
 };
