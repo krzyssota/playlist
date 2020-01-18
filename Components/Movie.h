@@ -3,11 +3,13 @@
 
 #include "File.h"
 
-class Movie : public Component {
+class Movie : public File {
 private :
     int year;
 public :
-    explicit Movie(std::string &s);
+    /*explicit Movie(std::string &s);*/
+    Movie(std::string &s, int year);
+    void play() override;
 };
 
 #endif //_MOVIE_H_

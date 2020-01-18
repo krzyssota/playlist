@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(.)
 
 add_executable(playlist
+        Task/testy_1.cpp
         Task/playlist_example.cc
         Components/File.cpp Components/File.h
         Components/Song.cpp Components/Song.h
@@ -21,5 +22,4 @@ add_executable(playlist
         Modes/ShuffleMode.cpp Modes/ShuffleMode.h
         Modes/OddEvenMode.cpp Modes/OddEvenMode.h
         Modes/SequenceMode.cpp Modes/SequenceMode.h
-
         )

@@ -2,7 +2,8 @@
 #define _COMPONENT_H_
 
 class Component {
-    virtual void play();
+public:
+    virtual void play() = 0;
 };
 
 #endif //_COMPONENT_H_

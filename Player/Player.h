@@ -6,10 +6,10 @@
 #include <Components/File.h>
 
 class Player {
-private:
 public :
-    Playlist& createPlaylist(std::string s);
-    File& openFile(File& f)
+    std::shared_ptr<Playlist> createPlaylist(std::string s);
+    File& openFile(File& f);
+
 };
 
 #endif //_PLAYER_H_
