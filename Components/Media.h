@@ -18,11 +18,7 @@ protected:
     std::string fileType;
     std::vector<std::string> dataRequirements;
 public:
-    explicit Media(File &f) {
-        attributes = f.getAttributes();
-        content = f.getContent();
-        fileType = f.getFileType();
-    }
+    explicit Media(File &f);
     virtual ~Media() = 0;
 };
 

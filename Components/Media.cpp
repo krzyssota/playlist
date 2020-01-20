@@ -3,3 +3,9 @@
 //
 
 #include "Media.h"
+
+Media::Media(File &f) {
+    attributes = f.getFileAttributes();
+    content = f.getFileContent();
+    fileType = f.getFileType();
+}
