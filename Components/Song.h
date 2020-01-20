@@ -7,8 +7,9 @@ class Song : public Component {
 private:
     std::string artist;
 public:
-    Song(const std::string& content, std::string args);
-    Song(const File& f);
+//    Song(const std::string& content, std::string args);
+    explicit Song(const File& f);
+    void play() override;
 };
 
 #endif // _SONG_H_

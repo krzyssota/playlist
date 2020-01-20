@@ -6,13 +6,17 @@
 #include "Song.h"
 #include "Movie.h"
 
-static const std::regex CONTENT_REGEX(R"(^([a-zA-Z0-9 ,.!?':;\-])+$)");
+static std::regex CONTENT_REGEX(R"(^([a-zA-Z0-9 ,.!?':;\-])+$)");
 static const char COLON = ':';
 static const std::string ARTIST = "artist";
 static const std::string TITLE = "title";
 static const std::string YEAR = "year";
 static const std::string SONG = "audio";
 static const std::string MOVIE = "video";
+
+//__attribute__((constructor)) static void initialise() {
+//    CONTENT_REGEX = std::regex(R"(^([a-zA-Z0-9 ,.!?':;\-])+$)");
+//}
 
 static strings_t splitByFirstOccurence(std::string &s, char delimiter);
 

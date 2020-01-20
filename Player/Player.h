@@ -8,7 +8,7 @@
 class Player {
 public :
     std::shared_ptr<Playlist> createPlaylist(std::string s);
-    static File& openFile(File& f);
+    static Component openFile(File& f);
 
 };
 

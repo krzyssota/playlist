@@ -1,8 +1,10 @@
+#include <Components/FilesParser.h>
 #include "Player.h"
 
-File& Player::openFile(File &f) {
-    f.setOpenStatus();
-    return f;
+Component Player::openFile(File &f) {
+//    f.setOpenStatus();
+//    return f;
+    return FilesParser::openFile(f);
 }
 
 std::shared_ptr<Playlist> Player::createPlaylist(std::string s) {
