@@ -6,7 +6,7 @@
 #include "Song.h"
 #include "Movie.h"
 
-static std::regex CONTENT_REGEX(R"(^([a-zA-Z0-9 ,.!?':;\-])+$)");
+
 static const char COLON = ':';
 static const std::string ARTIST = "artist";
 static const std::string TITLE = "title";
@@ -14,9 +14,9 @@ static const std::string YEAR = "year";
 static const std::string SONG = "audio";
 static const std::string MOVIE = "video";
 
-//__attribute__((constructor)) static void initialise() {
-//    CONTENT_REGEX = std::regex(R"(^([a-zA-Z0-9 ,.!?':;\-])+$)");
-//}
+/*__attribute__((constructor)) static void initialise() {
+    CONTENT_REGEX = std::regex(R"(^([a-zA-Z0-9 ,.!?':;\-])+$)");
+}*/
 
 static strings_t splitByFirstOccurence(std::string &s, char delimiter);
 
@@ -49,20 +49,15 @@ strings_t FilesParser::splitString(std::string &s, char delimiter) {
 }
 
 bool FilesParser::validateDescripton(const strings_t &strings) {
+    static std::regex CONTENT_REGEX(R"(^([a-zA-Z0-9 ,.!?':;\-])+$)");
     for (const std::string &s : strings) {
         if (!std::regex_match(s, CONTENT_REGEX)) { return false; }
     }
 
     return true;
 }
-Component FilesParser::openFile(File &f) {
-    if (f.getFileType() == SONG) {
-        return Song(f);
-    } else if (f.getFileType() == MOVIE) {
-        return Movie(f);
-    } else {
-        throw InvalidNameException();
-    }
+std::shared_ptr<Component> FilesParser::openFile(File &f) { // TODO zwraca shared ptr  funkvja playera
+
 }
 
 strings_t splitByFirstOccurence(std::string &s, char delimiter) {

@@ -17,7 +17,7 @@ class Playlist : public Component {
   public:
     explicit Playlist(std::string name) : name(std::move(name)), mode(createSequenceMode()) {}
 
-    void add(const std::shared_ptr<Component>& element); // KS 17.01 21:45 zmieniłem sygnature
+    void add(const std::shared_ptr<Component>& element);
     //void add(const Component &element, size_t position);
 
     void remove();

@@ -5,7 +5,7 @@
 Movie::Movie(std::string &s) {
 }
 */
-Movie::Movie(std::string &s, int y) : File() {
+Movie::Movie(std::string &s, int y) {
     title = s;
     year = y;
 }
