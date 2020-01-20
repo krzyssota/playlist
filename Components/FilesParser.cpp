@@ -8,17 +8,20 @@
 
 
 static const char COLON = ':';
-static const std::string ARTIST = "artist";
-static const std::string TITLE = "title";
-static const std::string YEAR = "year";
-static const std::string SONG = "audio";
-static const std::string MOVIE = "video";
 
-/*__attribute__((constructor)) static void initialise() {
-    CONTENT_REGEX = std::regex(R"(^([a-zA-Z0-9 ,.!?':;\-])+$)");
-}*/
+strings_t splitByFirstOccurence(std::string &s, char delimiter) {
+    size_t pos = s.find(delimiter);
 
-static strings_t splitByFirstOccurence(std::string &s, char delimiter);
+    if (pos == std::string::npos) {
+        throw InvalidNameException();
+    }
+
+    strings_t keyValue;
+    keyValue.emplace_back(s.substr(0, pos - 1));
+    keyValue.emplace_back(s.substr(pos + 1));
+
+    return keyValue;
+}
 
 attributes_t FilesParser::separateAttributes(strings_t &strings) {
     attributes_t attributes;
@@ -57,16 +60,3 @@ bool FilesParser::validateDescripton(const strings_t &strings) {
     return true;
 }
 
-strings_t splitByFirstOccurence(std::string &s, char delimiter) {
-    size_t pos = s.find(delimiter);
-
-    if (pos == std::string::npos) {
-        throw InvalidNameException();
-    }
-
-    strings_t keyValue;
-    keyValue.emplace_back(s.substr(0, pos - 1));
-    keyValue.emplace_back(s.substr(pos + 1));
-
-    return keyValue;
-}

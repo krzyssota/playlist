@@ -3,7 +3,7 @@
 
 #include <bits/exception.h>
 
-class PlayerException : std::exception {
+class PlayerException :public std::exception {
 
 };
 
