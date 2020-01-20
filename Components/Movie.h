@@ -5,10 +5,11 @@
 
 class Movie : public Component {
 private :
-    int year;
+//    int year;
 public :
     /*explicit Movie(std::string &s);*/
     Movie(std::string &s, int year);
+    explicit Movie(const File &f);
     void play() override;
 };
 

@@ -23,6 +23,8 @@ public:
     File();
     void setOpenStatus();
     std::string getFileType();
+    attributes_t getFileAttributes();
+    std::string getFileContent();
 };
 
 #endif //_FILE_H_

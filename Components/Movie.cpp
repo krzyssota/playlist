@@ -14,3 +14,6 @@ Movie::Movie(std::string &s, int y) {
 void Movie::play() {
     std::cout << "Movie [" << title << ", " << year << "]: " << std::endl;
 }
+Movie::Movie(const File &f) {
+
+}

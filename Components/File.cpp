@@ -48,3 +48,9 @@ File::File() {
 std::string File::getFileType() {
     return fileType;
 }
+attributes_t File::getFileAttributes() {
+    return attributes;
+}
+std::string File::getFileContent() {
+    return content;
+}

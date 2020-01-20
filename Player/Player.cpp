@@ -4,6 +4,17 @@
 #include "Components/Song.h"
 #include "Components/Movie.h"
 
+static const std::string SONG = "audio";
+static const std::string MOVIE = "video";
+static const std::function SONG_L = [](File &f) { return std::make_shared<Song>(f); };
+static const std::function MOVIE_L = [](File &f) { return std::make_shared<Movie>(f); };
+
+
+Player::Player() : fileTypes() {
+    fileTypes.emplace(SONG, SONG_L);
+    fileTypes.emplace(MOVIE, MOVIE_L);
+}
+
 std::shared_ptr<Component> Player::openFile(File &f) {
 //    f.setOpenStatus();
 //    return f;
@@ -16,7 +27,6 @@ std::shared_ptr<Component> Player::openFile(File &f) {
         throw InvalidNameException();
     }
 }
-
 std::shared_ptr<Playlist> Player::createPlaylist(std::string s) {
 
     return std::make_shared<Playlist>(s);
