@@ -2,13 +2,11 @@
 #define _SONG_H_
 
 #include "Components/File.h"
+#include "Media.h"
 
-class Song : public Component {
-private:
-    std::string artist;
+class Song : public Media {
 public:
-//    Song(const std::string& content, std::string args);
-    explicit Song(const File& f);
+    explicit Song(File& f);
     void play() override;
 };
 

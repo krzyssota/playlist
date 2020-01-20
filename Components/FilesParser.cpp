@@ -56,9 +56,6 @@ bool FilesParser::validateDescripton(const strings_t &strings) {
 
     return true;
 }
-std::shared_ptr<Component> FilesParser::openFile(File &f) { // TODO zwraca shared ptr  funkvja playera
-
-}
 
 strings_t splitByFirstOccurence(std::string &s, char delimiter) {
     size_t pos = s.find(delimiter);

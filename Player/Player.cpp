@@ -16,8 +16,7 @@ Player::Player() : fileTypes() {
 }
 
 std::shared_ptr<Component> Player::openFile(File &f) {
-//    f.setOpenStatus();
-//    return f;
+    f.setOpenStatus();
     if (f.getFileType() == SONG) {
         //Song s = Song(f);
         return std::make_shared<Song>(f);
