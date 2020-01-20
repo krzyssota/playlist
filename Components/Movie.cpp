@@ -29,3 +29,6 @@ void Movie::play() {
     std::cout << "Movie [" << attributes["title"] << ", " << attributes["year"] << "]: ";
     std::cout << decode(content) << std::endl;
 }
+Movie::Movie(const File &f) {
+
+}

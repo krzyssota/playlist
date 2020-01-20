@@ -20,8 +20,8 @@ public:
     explicit File(const char *s) : File((std::string&) s) {}
     void setOpenStatus();
     std::string getFileType();
-    attributes_t getAttributes();
-    std::string getContent();
+    attributes_t getFileAttributes();
+    std::string getFileContent();
 };
 
 #endif //_FILE_H_

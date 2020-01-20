@@ -25,11 +25,9 @@ File::File(std::string &description) : opened(false) {
 std::string File::getFileType() {
     return fileType;
 }
-
-attributes_t File::getAttributes() {
+attributes_t File::getFileAttributes() {
     return attributes;
 }
-
-std::string File::getContent() {
+std::string File::getFileContent() {
     return content;
 }
