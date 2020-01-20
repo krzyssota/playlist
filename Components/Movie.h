@@ -3,7 +3,7 @@
 
 #include "File.h"
 
-class Movie : public File {
+class Movie : public Component {
 private :
     int year;
 public :

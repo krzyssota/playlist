@@ -17,3 +17,6 @@ Song::Song(const std::string& scontent, std::string args) : File{} { // fejkowy 
 
     }
 }
+Song::Song(const File &f) {
+
+}

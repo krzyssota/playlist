@@ -9,7 +9,7 @@
 using strings_t = std::vector<std::string>;
 using attributes_t = std::map<std::string, std::string>;
 
-class File : public Component {
+class File {
 protected :
     bool opened;
     attributes_t attributes;
@@ -19,8 +19,10 @@ protected :
     std::string fileType;
 public:
     explicit File(std::string& s);
+    explicit File(const char *s) : File((std::string&) s) {}
     File();
     void setOpenStatus();
+    std::string getFileType();
 };
 
 #endif //_FILE_H_

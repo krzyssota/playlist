@@ -45,3 +45,6 @@ File::File(std::string &description) : opened(false) {
 File::File() {
     // empty
 }
+std::string File::getFileType() {
+    return fileType;
+}

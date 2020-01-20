@@ -3,11 +3,12 @@
 
 #include "Components/File.h"
 
-class Song : public File {
+class Song : public Component {
 private:
     std::string artist;
 public:
     Song(const std::string& content, std::string args);
+    Song(const File& f);
 };
 
 #endif // _SONG_H_

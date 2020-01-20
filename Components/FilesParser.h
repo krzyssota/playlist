@@ -10,6 +10,7 @@ class FilesParser {
     static attributes_t separateAttributes(strings_t &strings);
     static strings_t splitString(std::string &s, char delimiter);
     static bool validateDescripton(const strings_t &strings);
+    static Component openFile(File &f);
 };
 
 #endif //_MEDIAPARSER_H_

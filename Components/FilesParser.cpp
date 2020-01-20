@@ -3,12 +3,16 @@
 #include <Player/Exceptions/InvalidNameException.h>
 #include "FilesParser.h"
 #include "Player/Exceptions/IncompleteDescriptionException.h"
+#include "Song.h"
+#include "Movie.h"
 
 static const std::regex CONTENT_REGEX(R"(^([a-zA-Z0-9 ,.!?':;\-])+$)");
 static const char COLON = ':';
 static const std::string ARTIST = "artist";
 static const std::string TITLE = "title";
 static const std::string YEAR = "year";
+static const std::string SONG = "audio";
+static const std::string MOVIE = "video";
 
 static strings_t splitByFirstOccurence(std::string &s, char delimiter);
 
@@ -46,6 +50,15 @@ bool FilesParser::validateDescripton(const strings_t &strings) {
     }
 
     return true;
+}
+Component FilesParser::openFile(File &f) {
+    if (f.getFileType() == SONG) {
+        return Song(f);
+    } else if (f.getFileType() == MOVIE) {
+        return Movie(f);
+    } else {
+        throw InvalidNameException();
+    }
 }
 
 strings_t splitByFirstOccurence(std::string &s, char delimiter) {
