@@ -22,4 +22,4 @@ add_executable(playlist
         Modes/ShuffleMode.cpp Modes/ShuffleMode.h
         Modes/OddEvenMode.cpp Modes/OddEvenMode.h
         Modes/SequenceMode.cpp Modes/SequenceMode.h
-        )
+        Components/Media.cpp Components/Media.h)

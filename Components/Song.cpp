@@ -1,27 +1,15 @@
 #include "Song.h"
-#include <regex>
+#include <Player/Exceptions/IncompleteDescriptionException.h>
 #include <iostream>
 
-/*
-File("audio|artist:Dire Straits|title:Money for Nothing|"
- "Now look at them yo-yo's that's the way you do it..."));
- */
-
-static const std::vector<std::string> REQUIREMENTS{"artist", "title"};
-
-//Song::Song(const std::string& scontent, std::string args) { // fejkowy konstruktor File
-//    content = scontent;
-//    std::string sartist("artist:");
-//    std::string stitle("title:");
-//
-//
-//    for(size_t i = 0; i < args.size(); i++) {
-//
-//    }
-//}
-Song::Song(const File &f) {
-
+Song::Song(File &f) :Media(f) {
+    dataRequirements = {"title", "artist"};
+    for(const auto& r : dataRequirements) {
+        auto it = attributes.find(r);
+        if(it == attributes.begin()) throw IncompleteDescriptionException();
+    }
 }
 void Song::play() {
-
+    std::cout << "Song [" << attributes["artist"] << ", " << attributes["title"] << "]: ";
+    std::cout << content << std::endl;
 }

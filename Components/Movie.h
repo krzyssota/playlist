@@ -2,13 +2,11 @@
 #define _MOVIE_H_
 
 #include "File.h"
+#include "Media.h"
 
-class Movie : public Component {
-private :
-    int year;
+class Movie : public Media {
 public :
-    /*explicit Movie(std::string &s);*/
-    Movie(std::string &s, int year);
+    explicit Movie(File& f);
     void play() override;
 };
 

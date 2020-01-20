@@ -13,16 +13,15 @@ class File {
 protected :
     bool opened;
     attributes_t attributes;
-    std::string extraMetadata;
-    std::string title;
     std::string content;
     std::string fileType;
 public:
     explicit File(std::string& s);
     explicit File(const char *s) : File((std::string&) s) {}
-    File();
     void setOpenStatus();
     std::string getFileType();
+    attributes_t getAttributes();
+    std::string getContent();
 };
 
 #endif //_FILE_H_
