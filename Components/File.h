@@ -19,9 +19,9 @@ public:
     explicit File(std::string& s);
     explicit File(const char *s) : File((std::string&) s) {}
     void setOpenStatus();
-    std::string getFileType();
-    attributes_t getFileAttributes();
-    std::string getFileContent();
+    std::string getFileType() const;
+    attributes_t getFileAttributes() const;
+    std::string getFileContent() const;
 };
 
 #endif //_FILE_H_

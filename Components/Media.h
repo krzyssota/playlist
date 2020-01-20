@@ -18,8 +18,9 @@ protected:
     std::string fileType;
     std::vector<std::string> dataRequirements;
 public:
-    explicit Media(File &f);
+    explicit Media(const File &f);
     virtual ~Media() = 0;
+    virtual void play() = 0;
 };
 
 

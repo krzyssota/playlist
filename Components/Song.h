@@ -6,7 +6,7 @@
 
 class Song : public Media {
 public:
-    explicit Song(File& f);
+    explicit Song(const File& f);
     void play() override;
 };
 

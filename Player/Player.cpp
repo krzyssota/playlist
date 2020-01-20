@@ -4,29 +4,20 @@
 #include "Components/Song.h"
 #include "Components/Movie.h"
 
-static const std::string SONG = "audio";
-static const std::string MOVIE = "video";
-static const std::function SONG_L = [](File &f) { return std::make_shared<Song>(f); };
-static const std::function MOVIE_L = [](File &f) { return std::make_shared<Movie>(f); };
 
+auto SONG_L = [](const File &f) { return std::make_shared<Song>(f); };
+auto MOVIE_L = [](const File &f) { return std::make_shared<Movie>(f); };
 
-Player::Player() : fileTypes() {
-    fileTypes.emplace(SONG, SONG_L);
-    fileTypes.emplace(MOVIE, MOVIE_L);
+Player::Player() {
+    fileTypes.emplace("audio", SONG_L);
+    fileTypes.emplace("video", MOVIE_L);
 }
 
-std::shared_ptr<Component> Player::openFile(File &f) {
-    f.setOpenStatus();
-    if (f.getFileType() == SONG) {
-        //Song s = Song(f);
-        return std::make_shared<Song>(f);
-    } else if (f.getFileType() == MOVIE) {
-        return std::make_shared<Movie>(f);
-    } else {
-        throw InvalidNameException();
-    }
+std::shared_ptr<Media> Player::openFile(const File &f) { // TODO nie ogarniam. f powinno byc constowe
+    auto it = fileTypes.find(f.getFileType()); // getFileType constowa
+    if(it != fileTypes.end()) return it->second(f);
+    else throw InvalidNameException();
 }
 std::shared_ptr<Playlist> Player::createPlaylist(std::string s) {
-
     return std::make_shared<Playlist>(s);
 }

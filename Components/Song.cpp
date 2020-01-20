@@ -2,11 +2,11 @@
 #include <Player/Exceptions/IncompleteDescriptionException.h>
 #include <iostream>
 
-Song::Song(File &f) :Media(f) {
+Song::Song(const File &f) : Media(f) {
     dataRequirements = {"title", "artist"};
     for(const auto& r : dataRequirements) {
         auto it = attributes.find(r);
-        if(it == attributes.begin()) throw IncompleteDescriptionException();
+        if(it == attributes.end()) throw IncompleteDescriptionException();
     }
 }
 void Song::play() {

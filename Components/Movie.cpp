@@ -2,24 +2,24 @@
 #include "Movie.h"
 #include <Player/Exceptions/IncompleteDescriptionException.h>
 
-Movie::Movie(File &f) : Media(f) {
-    dataRequirements = {"title", "artist"};
+Movie::Movie(const File &f) : Media(f) {
+    dataRequirements = {"title", "year"};
     for (const auto &r : dataRequirements) {
         auto it = attributes.find(r);
-        if (it == attributes.begin()) throw IncompleteDescriptionException();
+        if (it == attributes.end()) throw IncompleteDescriptionException();
     }
 }
 
 std::string decode(const std::string& source) {
     std::string result;
-    for (size_t i = 0; i < source.size(); ++i) {
-        if (isalpha(source[i])) {
-            if ((tolower(source[i]) - 'a') < 14)
-                result.append(1, source[i] + 13);
+    for (char c : source) {
+        if (isalpha(c)) {
+            if ((tolower(c) - 'a') < 14)
+                result.append(1, c + 13);
             else
-                result.append(1, source[i] - 13);
+                result.append(1, c - 13);
         } else {
-            result.append(1, source[i]);
+            result.append(1, c);
         }
     }
     return result;
@@ -28,7 +28,4 @@ std::string decode(const std::string& source) {
 void Movie::play() {
     std::cout << "Movie [" << attributes["title"] << ", " << attributes["year"] << "]: ";
     std::cout << decode(content) << std::endl;
-}
-Movie::Movie(const File &f) {
-
 }

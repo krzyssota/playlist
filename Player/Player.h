@@ -4,17 +4,18 @@
 #include <Components/Playlist.h>
 #include <string>
 #include <Components/File.h>
+#include "Components/Media.h"
 #include <functional>
 
-using types_t = std::map<std::string, std::function<std::shared_ptr<Component>(File &f)>>;
+using types_t = std::unordered_map<std::string, std::function<std::shared_ptr<Media>(const File &f)> >;
 
 class Player {
-  private:
+private:
     types_t fileTypes;
 public :
     Player();
     std::shared_ptr<Playlist> createPlaylist(std::string s);
-    static std::shared_ptr<Component> openFile(File& f);
+    std::shared_ptr<Media> openFile(const File& f);
 
 };
 

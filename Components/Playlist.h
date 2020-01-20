@@ -7,6 +7,7 @@
 #include <vector>
 #include "Components/Component.h"
 #include "Modes/Mode.h"
+#include "Media.h"
 
 class Playlist : public Component {
   private:
@@ -18,7 +19,7 @@ class Playlist : public Component {
     explicit Playlist(std::string name) : name(std::move(name)), mode(createSequenceMode()) {}
 
     void add(const std::shared_ptr<Component>& element);
-    //void add(const Component &element, size_t position);
+    void add(const std::shared_ptr<Component>& element, size_t position);
 
     void remove();
     void remove(size_t position);
