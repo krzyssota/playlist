@@ -10,7 +10,7 @@
 
 using attributes_t = std::map<std::string, std::string>;
 
-class Media : Component {
+class Media : public Component {
 private:
 protected:
     attributes_t attributes;
@@ -19,7 +19,7 @@ protected:
     std::vector<std::string> dataRequirements;
 public:
     explicit Media(const File &f);
-    virtual ~Media() = 0;
+    virtual ~Media() {};
     virtual void play() = 0;
 };
 

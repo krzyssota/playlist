@@ -3,7 +3,7 @@
 
 #include "PlayerException.h"
 
-class IncompleteDescriptionException : PlayerException {
+class IncompleteDescriptionException : public PlayerException {
 
 };
 

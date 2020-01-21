@@ -9,7 +9,7 @@ void File::setOpenStatus() {
     opened = true;
 }
 
-File::File(std::string& description) : opened(false) {
+File::File(std::string description) : opened(false) {
     strings_t tokens = FilesParser::splitString(description, PIPE);
 
     if (!FilesParser::validateDescripton(tokens)) {

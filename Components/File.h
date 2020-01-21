@@ -16,8 +16,8 @@ protected :
     std::string content;
     std::string fileType;
 public:
-    explicit File(std::string& s);
-    explicit File(const char *s) : File((std::string&) s) {}
+    explicit File(std::string s);
+    explicit File(const char *s) : File((std::string) s) {}
     void setOpenStatus();
     std::string getFileType() const;
     attributes_t getFileAttributes() const;

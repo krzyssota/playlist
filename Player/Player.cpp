@@ -18,6 +18,7 @@ std::shared_ptr<Media> Player::openFile(const File &f) { // TODO nie ogarniam. f
     if(it != fileTypes.end()) return it->second(f);
     else throw InvalidNameException();
 }
+
 std::shared_ptr<Playlist> Player::createPlaylist(std::string s) {
     return std::make_shared<Playlist>(s);
 }

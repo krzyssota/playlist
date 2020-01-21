@@ -14,7 +14,7 @@ std::string decode(const std::string& source) {
     std::string result;
     for (char c : source) {
         if (isalpha(c)) {
-            if ((tolower(c) - 'a') < 14)
+            if ((tolower(c) - 'a') < 13)    // Changed from 14 to 13 idk why work
                 result.append(1, c + 13);
             else
                 result.append(1, c - 13);

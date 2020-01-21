@@ -17,7 +17,7 @@ strings_t splitByFirstOccurence(std::string &s, char delimiter) {
     }
 
     strings_t keyValue;
-    keyValue.emplace_back(s.substr(0, pos - 1));
+    keyValue.emplace_back(s.substr(0, pos));
     keyValue.emplace_back(s.substr(pos + 1));
 
     return keyValue;
