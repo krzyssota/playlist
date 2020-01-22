@@ -12,16 +12,16 @@ add_executable(playlist
         Components/Song.cpp Components/Song.h
         Components/Movie.cpp Components/Movie.h
         Components/Playlist.cpp Components/Playlist.h
-        Components/Component.cpp Components/Component.h
+        Components/Component.h
         Components/FilesParser.cpp Components/FilesParser.h
         Player/Player.cpp Player/Player.h
-        Player/Exceptions/PlayerException.cpp Player/Exceptions/PlayerException.h
+        Player/Exceptions/PlayerException.h
         Player/Exceptions/CycleException.cpp Player/Exceptions/CycleException.h
         Player/Exceptions/InvalidNameException.cpp Player/Exceptions/InvalidNameException.h
         Player/Exceptions/InvalidPositionException.cpp Player/Exceptions/InvalidPositionException.h
         Player/Exceptions/IncompleteDescriptionException.cpp Player/Exceptions/IncompleteDescriptionException.h
         Player/Exceptions/UnsupportedTypeException.cpp Player/Exceptions/UnsupportedTypeException.h
-        Modes/Mode.cpp Modes/Mode.h
+        Modes/Mode.h
         Modes/ShuffleMode.cpp Modes/ShuffleMode.h
         Modes/OddEvenMode.cpp Modes/OddEvenMode.h
         Modes/SequenceMode.cpp Modes/SequenceMode.h

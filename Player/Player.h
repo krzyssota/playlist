@@ -14,9 +14,8 @@ private:
     types_t fileTypes;
 public :
     Player();
-    std::shared_ptr<Playlist> createPlaylist(std::string s);
+    static std::shared_ptr<Playlist> createPlaylist(const std::string& s);
     std::shared_ptr<Media> openFile(const File& f);
-
 };
 
 #endif //_PLAYER_H_

@@ -4,6 +4,7 @@
 #include <memory>
 #include "Mode.h"
 
+
 class OddEvenMode : public Mode {
 public:
     OddEvenMode() = default;

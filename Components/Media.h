@@ -10,6 +10,7 @@
 
 using attributes_t = std::map<std::string, std::string>;
 
+
 class Media : public Component {
 private:
 protected:
@@ -19,8 +20,9 @@ protected:
     std::vector<std::string> dataRequirements;
 public:
     explicit Media(const File &f);
-    virtual ~Media() {};
-    virtual void play() = 0;
+    virtual ~Media() = default;;
+    void play() override = 0;
+    bool isCycle(Component *element) override;
 };
 
 

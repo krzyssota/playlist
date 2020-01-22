@@ -7,6 +7,6 @@ std::shared_ptr<SequenceMode> createSequenceMode() {
 
 void SequenceMode::play(const std::vector <std::shared_ptr<Component>> &elements) {
     for(const auto& el : elements) {
-        el.get()->play();
+        el->play();
     }
 }

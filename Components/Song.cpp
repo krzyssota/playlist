@@ -4,9 +4,11 @@
 
 Song::Song(const File &f) : Media(f) {
     dataRequirements = {"title", "artist"};
-    for(const auto& r : dataRequirements) {
+
+    for (const auto &r : dataRequirements) {
         auto it = attributes.find(r);
-        if(it == attributes.end()) throw IncompleteDescriptionException();
+
+        if (it == attributes.end()) { throw IncompleteDescriptionException(); }
     }
 }
 void Song::play() {

@@ -5,6 +5,7 @@
 #include <memory>
 #include <Components/Component.h>
 
+
 class Mode {
 public:
     virtual ~Mode() = default;;

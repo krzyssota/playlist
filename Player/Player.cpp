@@ -19,6 +19,6 @@ std::shared_ptr<Media> Player::openFile(const File &f) {
     else throw UnsupportedTypeException();
 }
 
-std::shared_ptr<Playlist> Player::createPlaylist(std::string s) {
+std::shared_ptr<Playlist> Player::createPlaylist(const std::string& s) {
     return std::make_shared<Playlist>(s);
 }

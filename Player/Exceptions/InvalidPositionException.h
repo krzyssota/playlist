@@ -3,6 +3,7 @@
 
 #include "PlayerException.h"
 
+
 class InvalidPositionException : public PlayerException {
     [[nodiscard]] const char *what() const noexcept override;
 };

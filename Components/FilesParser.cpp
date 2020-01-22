@@ -6,8 +6,8 @@
 #include "Song.h"
 #include "Movie.h"
 
-
 static const char COLON = ':';
+
 
 strings_t splitByFirstOccurence(std::string &s, char delimiter) {
     size_t pos = s.find(delimiter);
@@ -51,12 +51,10 @@ strings_t FilesParser::splitString(std::string &s, char delimiter) {
     return tokens;
 }
 
-bool FilesParser::validateDescripton(const strings_t &strings) {
+bool FilesParser::isDescriptionValid(const strings_t &strings) {
     static std::regex CONTENT_REGEX(R"(^([a-zA-Z0-9 ,.!?':;\-])+$)");
-    for (const std::string &s : strings) {
-        if (!std::regex_match(s, CONTENT_REGEX)) { return false; }
-    }
 
-    return true;
+    return std::regex_match(strings.front(), CONTENT_REGEX) &&
+        std::regex_match(strings.back(), CONTENT_REGEX);
 }
 

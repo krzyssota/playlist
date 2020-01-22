@@ -3,8 +3,9 @@
 
 #include "PlayerException.h"
 
-class CycleException : public PlayerException {
 
+class CycleException : public PlayerException {
+    [[nodiscard]] const char *what() const noexcept override;
 };
 
 #endif //_CYCLEEXCEPTION_H_

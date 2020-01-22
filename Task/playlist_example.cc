@@ -64,5 +64,16 @@ int main() {
         std::cout << e.what() << std::endl;
     }
 
+    auto A = player.createPlaylist("A");
+    auto B = player.createPlaylist("B");
+
+    B->add(A);
+
+    try {
+        A->add(B);
+    } catch (PlayerException const& e) {
+        std::cout << e.what() << std::endl;
+    }
+
     return 0;
 }
