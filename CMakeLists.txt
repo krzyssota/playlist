@@ -19,9 +19,9 @@ add_executable(playlist
         Player/Exceptions/CycleException.cpp Player/Exceptions/CycleException.h
         Player/Exceptions/InvalidNameException.cpp Player/Exceptions/InvalidNameException.h
         Player/Exceptions/InvalidPositionException.cpp Player/Exceptions/InvalidPositionException.h
+        Player/Exceptions/IncompleteDescriptionException.cpp Player/Exceptions/IncompleteDescriptionException.h
         Modes/Mode.cpp Modes/Mode.h
         Modes/ShuffleMode.cpp Modes/ShuffleMode.h
         Modes/OddEvenMode.cpp Modes/OddEvenMode.h
         Modes/SequenceMode.cpp Modes/SequenceMode.h
-        Components/Media.cpp Components/Media.h
-        )
+        Components/Media.cpp Components/Media.h Player/Exceptions/UnsupportedTypeException.cpp Player/Exceptions/UnsupportedTypeException.h)
