@@ -58,5 +58,11 @@ int main() {
         std::cout << e.what() << std::endl;
     }
 
+    try {
+        mishmash->add(direstraits, 10);
+    } catch (PlayerException const& e) {
+        std::cout << e.what() << std::endl;
+    }
+
     return 0;
 }
