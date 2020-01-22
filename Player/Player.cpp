@@ -1,6 +1,6 @@
 #include <Components/FilesParser.h>
+#include <Player/Exceptions/UnsupportedTypeException.h>
 #include "Player.h"
-#include "Exceptions/InvalidNameException.h"
 #include "Components/Song.h"
 #include "Components/Movie.h"
 
@@ -13,10 +13,10 @@ Player::Player() {
     fileTypes.emplace("video", MOVIE_L);
 }
 
-std::shared_ptr<Media> Player::openFile(const File &f) { // TODO nie ogarniam. f powinno byc constowe
-    auto it = fileTypes.find(f.getFileType()); // getFileType constowa
+std::shared_ptr<Media> Player::openFile(const File &f) {
+    auto it = fileTypes.find(f.getFileType());
     if(it != fileTypes.end()) return it->second(f);
-    else throw InvalidNameException();
+    else throw UnsupportedTypeException();
 }
 
 std::shared_ptr<Playlist> Player::createPlaylist(std::string s) {
