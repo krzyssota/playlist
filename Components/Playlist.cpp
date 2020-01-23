@@ -6,6 +6,7 @@
 #include "Playlist.h"
 #include "Media.h"
 
+
 void Playlist::add(const std::shared_ptr<Component> &element) {
     if (element->isCycle(this)) { throw CycleException(); }
 
