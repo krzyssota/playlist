@@ -1,6 +1,6 @@
+#include <InvalidNameException.h>
 #include "File.h"
 #include "FilesParser.h"
-#include <InvalidNameException.h>
 
 static const char PIPE = '|';
 

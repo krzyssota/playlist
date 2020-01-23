@@ -5,6 +5,6 @@ Media::Media(const File &f) {
     content = f.getFileContent();
 }
 
-bool Media::isCycle(const Component *element) {
+bool Media::isCycle(const Component *element __attribute__((unused))) {
     return false;
 }

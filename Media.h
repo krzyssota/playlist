@@ -3,10 +3,10 @@
 
 #include <utility>
 #include <vector>
-#include "Component.h"
-#include "File.h"
 #include <string>
 #include <map>
+#include "Component.h"
+#include "File.h"
 
 using attributes_t = std::map<std::string, std::string>;
 
@@ -18,7 +18,7 @@ class Media : public Component {
     strings_t dataRequirements;
   public:
     explicit Media(const File &f);
-    virtual ~Media() = default;;
+//    ~Media() override = default;
     void play() override = 0;
     bool isCycle(const Component *element) override;
 };
