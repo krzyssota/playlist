@@ -3,6 +3,7 @@
 
 #include "File.h"
 #include "Media.h"
+#include "IncompleteDescriptionException.h"
 
 class Movie : public Media {
 public :

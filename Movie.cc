@@ -1,6 +1,4 @@
-#include <iostream>
 #include "Movie.h"
-#include <IncompleteDescriptionException.h>
 
 
 Movie::Movie(const File &f) : Media(f) {
