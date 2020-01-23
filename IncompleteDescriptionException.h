@@ -3,7 +3,6 @@
 
 #include "PlayerException.h"
 
-
 class IncompleteDescriptionException : public PlayerException {
     [[nodiscard]] const char *what() const noexcept override;
 };

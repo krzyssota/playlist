@@ -3,9 +3,8 @@
 
 #include "PlayerException.h"
 
-
 class UnsupportedTypeException : public PlayerException {
-public:
+  public:
     [[nodiscard]] const char *what() const noexcept override;
 };
 

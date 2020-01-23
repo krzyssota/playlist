@@ -3,7 +3,6 @@
 
 #include "PlayerException.h"
 
-
 class InvalidNameException : public PlayerException {
     [[nodiscard]] const char *what() const noexcept override;
 };

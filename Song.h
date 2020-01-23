@@ -6,10 +6,9 @@
 #include "File.h"
 #include "Media.h"
 
-
 class Song : public Media {
-public:
-    explicit Song(const File& f);
+  public:
+    explicit Song(const File &f);
     void play() override;
 };
 

@@ -4,7 +4,6 @@
 
 static const char COLON = ':';
 
-
 strings_t splitByFirstOccurence(std::string &s, char delimiter) {
     size_t pos = s.find(delimiter);
 

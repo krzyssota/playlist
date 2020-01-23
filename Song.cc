@@ -1,6 +1,5 @@
 #include "Song.h"
 
-
 Song::Song(const File &f) : Media(f) {
     dataRequirements = {"title", "artist"};
 

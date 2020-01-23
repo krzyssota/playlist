@@ -10,17 +10,16 @@
 #include "Movie.h"
 #include "UnsupportedTypeException.h"
 
-
 using fun_t = std::function<std::shared_ptr<Media>(const File &f)>;
 using types_t = std::unordered_map<std::string, fun_t>;
 
 class Player {
-private:
+  private:
     types_t fileTypes;
-public :
+  public :
     Player();
-    static std::shared_ptr<Playlist> createPlaylist(const std::string& s);
-    std::shared_ptr<Media> openFile(const File& f);
+    static std::shared_ptr<Playlist> createPlaylist(const std::string &s);
+    std::shared_ptr<Media> openFile(const File &f);
 };
 
 #endif //_PLAYER_H_

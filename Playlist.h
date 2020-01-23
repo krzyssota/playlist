@@ -13,12 +13,11 @@
 #include "Mode.h"
 #include "Media.h"
 
-
 class Playlist : public Component {
   private:
     std::string name;
     std::shared_ptr<Mode> mode;
-    std::vector<std::shared_ptr<Component>> elements;
+    componentPtrs_t elements;
   public:
     explicit Playlist(std::string name) : name(std::move(name)),
                                           mode(createSequenceMode()) {}
@@ -28,7 +27,7 @@ class Playlist : public Component {
     void remove(size_t position);
     void setMode(std::shared_ptr<Mode> newMode);
     void play() override;
-    bool isCycle(Component *element) override;
+    bool isCycle(const Component *element) override;
 };
 
 #endif //_PLAYLIST_H_

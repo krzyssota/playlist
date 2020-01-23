@@ -6,17 +6,16 @@
 #include <vector>
 #include "Component.h"
 
-
 using strings_t = std::vector<std::string>;
 using attributes_t = std::map<std::string, std::string>;
 
 class File {
-protected :
+  protected :
     bool opened;
     attributes_t attributes;
     std::string content;
     std::string fileType;
-public:
+  public:
     explicit File(std::string s);
     explicit File(const char *s) : File((std::string) s) {}
     [[nodiscard]] std::string getFileType() const;

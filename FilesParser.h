@@ -6,7 +6,6 @@
 #include <vector>
 #include "File.h"
 
-
 class FilesParser {
   public:
     static strings_t splitString(std::string &s, char delimiter);

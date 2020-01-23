@@ -4,12 +4,11 @@
 #include <memory>
 #include "Mode.h"
 
-
 class OddEvenMode : public Mode {
-public:
+  public:
     OddEvenMode() = default;
     ~OddEvenMode() override = default;
-    void play(const std::vector<std::shared_ptr<Component>>& elements) override;
+    void play(const componentPtrs_t &elements) override;
 };
 
 std::shared_ptr<OddEvenMode> createOddEvenMode();

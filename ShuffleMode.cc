@@ -1,11 +1,10 @@
 #include "ShuffleMode.h"
 
-
 std::shared_ptr<ShuffleMode> createShuffleMode(unsigned seed) {
     return std::make_shared<ShuffleMode>(seed);
 }
 
-void ShuffleMode::play(const std::vector<std::shared_ptr<Component>> &elements) {
+void ShuffleMode::play(const componentPtrs_t &elements) {
     size_t sz = elements.size();
     std::vector<size_t> indexes;
 

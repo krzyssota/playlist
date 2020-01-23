@@ -1,6 +1,5 @@
 #include "Playlist.h"
 
-
 void Playlist::add(const std::shared_ptr<Component> &element) {
     if (element->isCycle(this)) { throw CycleException(); }
 
@@ -33,7 +32,7 @@ void Playlist::play() {
     mode->play(elements);
 }
 
-bool Playlist::isCycle(Component *element) {
+bool Playlist::isCycle(const Component *element) {
     if (this == element) { return true; }
 
     for (auto &e : elements) {

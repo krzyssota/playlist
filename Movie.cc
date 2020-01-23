@@ -1,8 +1,8 @@
 #include <iostream>
 #include <regex>
 #include "Movie.h"
-#include <IncompleteDescriptionException.h>
-
+#include "InvalidNameException.h"
+#include "IncompleteDescriptionException.h"
 
 Movie::Movie(const File &f) : Media(f) {
     static std::regex YEAR_REGEX(R"(^[0-9]+$)");
@@ -13,7 +13,7 @@ Movie::Movie(const File &f) : Media(f) {
 
         if (it == attributes.end()) { throw IncompleteDescriptionException(); }
 
-        if (it->first == "year" && std::regex_match(it->second, YEAR_REGEX)) {
+        if (it->first == "year" && !std::regex_match(it->second, YEAR_REGEX)) {
             throw InvalidNameException();
         }
     }

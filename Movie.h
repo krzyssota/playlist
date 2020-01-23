@@ -4,7 +4,6 @@
 #include "File.h"
 #include "Media.h"
 
-
 class Movie : public Media {
   public :
     explicit Movie(const File &f);

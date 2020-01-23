@@ -10,10 +10,10 @@ Player::Player() {
 
 std::shared_ptr<Media> Player::openFile(const File &f) {
     auto it = fileTypes.find(f.getFileType());
-    if(it != fileTypes.end()) return it->second(f);
-    else throw UnsupportedTypeException();
+    if (it != fileTypes.end()) { return it->second(f); }
+    else { throw UnsupportedTypeException(); }
 }
 
-std::shared_ptr<Playlist> Player::createPlaylist(const std::string& s) {
+std::shared_ptr<Playlist> Player::createPlaylist(const std::string &s) {
     return std::make_shared<Playlist>(s);
 }
