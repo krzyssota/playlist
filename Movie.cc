@@ -1,6 +1,6 @@
+#include "Movie.h"
 #include <iostream>
 #include <regex>
-#include "Movie.h"
 #include "InvalidNameException.h"
 #include "IncompleteDescriptionException.h"
 
