@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <memory>
-#include <Components/Component.h>
+#include <Component.h>
 
 
 class Mode {

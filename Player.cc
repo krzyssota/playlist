@@ -1,9 +1,4 @@
-#include <Components/FilesParser.h>
-#include <Player/Exceptions/UnsupportedTypeException.h>
 #include "Player.h"
-#include "Components/Song.h"
-#include "Components/Movie.h"
-
 
 auto SONG_L = [](const File &f) { return std::make_shared<Song>(f); };
 auto MOVIE_L = [](const File &f) { return std::make_shared<Movie>(f); };

@@ -1,10 +1,4 @@
-#include <memory>
-#include <utility>
-#include <iostream>
-#include <Player/Exceptions/InvalidPositionException.h>
-#include <Player/Exceptions/CycleException.h>
 #include "Playlist.h"
-#include "Media.h"
 
 
 void Playlist::add(const std::shared_ptr<Component> &element) {

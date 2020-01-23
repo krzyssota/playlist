@@ -1,5 +1,3 @@
-#include <memory>
-#include <algorithm>
 #include "ShuffleMode.h"
 
 

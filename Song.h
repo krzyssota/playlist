@@ -1,7 +1,9 @@
 #ifndef _SONG_H_
 #define _SONG_H_
 
-#include "Components/File.h"
+#include <iostream>
+#include "IncompleteDescriptionException.h"
+#include "File.h"
 #include "Media.h"
 
 

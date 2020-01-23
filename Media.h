@@ -8,8 +8,8 @@
 #include <string>
 #include <map>
 
-
 using attributes_t = std::map<std::string, std::string>;
+
 
 class Media : public Component {
   private:
@@ -24,5 +24,6 @@ class Media : public Component {
     void play() override = 0;
     bool isCycle(Component *element) override;
 };
+
 
 #endif //PLAYLIST_MEDIA_H

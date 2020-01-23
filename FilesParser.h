@@ -1,6 +1,7 @@
 #ifndef _MEDIAPARSER_H_
 #define _MEDIAPARSER_H_
 
+#include <regex>
 #include <string>
 #include <vector>
 #include "File.h"

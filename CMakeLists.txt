@@ -6,24 +6,23 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(.)
 
 add_executable(playlist
-        Task/testy_1.cpp
-        Task/playlist_example.cc
-        Components/File.cpp Components/File.h
-        Components/Song.cpp Components/Song.h
-        Components/Movie.cpp Components/Movie.h
-        Components/Playlist.cpp Components/Playlist.h
-        Components/Component.h
-        Components/FilesParser.cpp Components/FilesParser.h
-        Player/Player.cpp Player/Player.h
-        Player/Exceptions/PlayerException.h
-        Player/Exceptions/CycleException.cpp Player/Exceptions/CycleException.h
-        Player/Exceptions/InvalidNameException.cpp Player/Exceptions/InvalidNameException.h
-        Player/Exceptions/InvalidPositionException.cpp Player/Exceptions/InvalidPositionException.h
-        Player/Exceptions/IncompleteDescriptionException.cpp Player/Exceptions/IncompleteDescriptionException.h
-        Player/Exceptions/UnsupportedTypeException.cpp Player/Exceptions/UnsupportedTypeException.h
-        Modes/Mode.h
-        Modes/ShuffleMode.cpp Modes/ShuffleMode.h
-        Modes/OddEvenMode.cpp Modes/OddEvenMode.h
-        Modes/SequenceMode.cpp Modes/SequenceMode.h
-        Components/Media.cpp Components/Media.h
+        playlist_example.cc
+        File.cc File.h
+        Song.cc Song.h
+        Movie.cc Movie.h
+        Playlist.cc Playlist.h
+        Component.h
+        FilesParser.cc FilesParser.h
+        Player.cc Player.h
+        PlayerException.h
+        CycleException.cc CycleException.h
+        InvalidNameException.cc InvalidNameException.h
+        InvalidPositionException.cc InvalidPositionException.h
+        IncompleteDescriptionException.cc IncompleteDescriptionException.h
+        UnsupportedTypeException.cc UnsupportedTypeException.h
+        Mode.h
+        ShuffleMode.cc ShuffleMode.h
+        OddEvenMode.cc OddEvenMode.h
+        SequenceMode.cc SequenceMode.h
+        Media.cc Media.h
         )

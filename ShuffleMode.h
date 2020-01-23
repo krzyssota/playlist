@@ -3,6 +3,7 @@
 
 #include <random>
 #include <memory>
+#include <algorithm>
 #include "Mode.h"
 
 

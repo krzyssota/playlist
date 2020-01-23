@@ -1,6 +1,4 @@
 #include "Song.h"
-#include <Player/Exceptions/IncompleteDescriptionException.h>
-#include <iostream>
 
 
 Song::Song(const File &f) : Media(f) {

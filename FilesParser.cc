@@ -1,10 +1,6 @@
-#include <sstream>
-#include <regex>
-#include <Player/Exceptions/InvalidNameException.h>
+#include "InvalidNameException.h"
+#include "IncompleteDescriptionException.h"
 #include "FilesParser.h"
-#include "Player/Exceptions/IncompleteDescriptionException.h"
-#include "Song.h"
-#include "Movie.h"
 
 static const char COLON = ':';
 

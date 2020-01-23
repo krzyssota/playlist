@@ -1,8 +1,6 @@
 #ifndef _COMPONENT_H_
 #define _COMPONENT_H_
 
-#include <memory>
-
 
 class Component {
 public:

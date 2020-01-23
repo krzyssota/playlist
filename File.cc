@@ -1,9 +1,8 @@
 #include "File.h"
 #include "FilesParser.h"
-#include <Player/Exceptions/InvalidNameException.h>
+#include <InvalidNameException.h>
 
 static const char PIPE = '|';
-
 
 File::File(std::string description) : opened(false) {
     strings_t tokens = FilesParser::splitString(description, PIPE);

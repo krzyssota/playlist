@@ -2,11 +2,15 @@
 #define _PLAYLIST_H_
 
 #include <string>
-#include <Modes/SequenceMode.h>
 #include <utility>
 #include <vector>
-#include "Components/Component.h"
-#include "Modes/Mode.h"
+#include <memory>
+#include <iostream>
+#include "InvalidPositionException.h"
+#include "CycleException.h"
+#include "SequenceMode.h"
+#include "Component.h"
+#include "Mode.h"
 #include "Media.h"
 
 

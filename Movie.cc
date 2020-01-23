@@ -1,8 +1,7 @@
 #include <iostream>
 #include <regex>
 #include "Movie.h"
-#include <Player/Exceptions/IncompleteDescriptionException.h>
-#include <Player/Exceptions/InvalidNameException.h>
+#include <IncompleteDescriptionException.h>
 
 
 Movie::Movie(const File &f) : Media(f) {
