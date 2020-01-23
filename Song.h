@@ -9,6 +9,7 @@
 class Song : public Media {
   public:
     explicit Song(const File &f);
+    ~Song() override = default;
     void play() override;
 };
 

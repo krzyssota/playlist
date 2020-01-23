@@ -21,7 +21,7 @@ class Playlist : public Component {
   public:
     explicit Playlist(std::string name) : name(std::move(name)),
                                           mode(createSequenceMode()) {}
-//    ~Playlist() override = default;
+    ~Playlist() override = default;
     void add(const std::shared_ptr<Component> &element);
     void add(const std::shared_ptr<Component> &element, size_t position);
     void remove();

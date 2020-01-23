@@ -18,7 +18,7 @@ class Media : public Component {
     strings_t dataRequirements;
   public:
     explicit Media(const File &f);
-//    ~Media() override = default;
+    virtual ~Media() = default;
     void play() override = 0;
     bool isCycle(const Component *element) override;
 };

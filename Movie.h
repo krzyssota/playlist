@@ -8,6 +8,7 @@
 class Movie : public Media {
   public :
     explicit Movie(const File &f);
+    ~Movie() override = default;
     void play() override;
 };
 
