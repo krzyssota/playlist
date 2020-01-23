@@ -10,15 +10,16 @@
 #include "Media.h"
 
 
-  class Playlist : public Component {
+class Playlist : public Component {
   private:
     std::string name;
     std::shared_ptr<Mode> mode;
     std::vector<std::shared_ptr<Component>> elements;
   public:
-    explicit Playlist(std::string name) : name(std::move(name)), mode(createSequenceMode()) {}
-    void add(const std::shared_ptr<Component>& element);
-    void add(const std::shared_ptr<Component>& element, size_t position);
+    explicit Playlist(std::string name) : name(std::move(name)),
+                                          mode(createSequenceMode()) {}
+    void add(const std::shared_ptr<Component> &element);
+    void add(const std::shared_ptr<Component> &element, size_t position);
     void remove();
     void remove(size_t position);
     void setMode(std::shared_ptr<Mode> newMode);

@@ -8,22 +8,21 @@
 #include <string>
 #include <map>
 
+
 using attributes_t = std::map<std::string, std::string>;
 
-
 class Media : public Component {
-private:
-protected:
+  private:
+  protected:
     attributes_t attributes;
     std::string content;
     std::string fileType;
-    std::vector<std::string> dataRequirements;
-public:
+    strings_t dataRequirements;
+  public:
     explicit Media(const File &f);
     virtual ~Media() = default;;
     void play() override = 0;
     bool isCycle(Component *element) override;
 };
-
 
 #endif //PLAYLIST_MEDIA_H
