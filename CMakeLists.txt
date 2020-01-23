@@ -14,13 +14,13 @@ add_executable(playlist
         Components/Playlist.cpp Components/Playlist.h
         Components/Component.h
         Components/FilesParser.cpp Components/FilesParser.h
-        Player/Player.cpp Player/Player.h
+        Player/Player.cc Player/Player.h
         Player/Exceptions/PlayerException.h
         Player/Exceptions/CycleException.cpp Player/Exceptions/CycleException.h
-        Player/Exceptions/InvalidNameException.cpp Player/Exceptions/InvalidNameException.h
-        Player/Exceptions/InvalidPositionException.cpp Player/Exceptions/InvalidPositionException.h
+        Player/Exceptions/InvalidNameException.cc Player/Exceptions/InvalidNameException.h
+        Player/Exceptions/InvalidPositionException.cc Player/Exceptions/InvalidPositionException.h
         Player/Exceptions/IncompleteDescriptionException.cpp Player/Exceptions/IncompleteDescriptionException.h
-        Player/Exceptions/UnsupportedTypeException.cpp Player/Exceptions/UnsupportedTypeException.h
+        Player/Exceptions/UnsupportedTypeException.cc Player/Exceptions/UnsupportedTypeException.h
         Modes/Mode.h
         Modes/ShuffleMode.cpp Modes/ShuffleMode.h
         Modes/OddEvenMode.cpp Modes/OddEvenMode.h
